@@ -23,6 +23,15 @@ a {
 	text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+
 .list {
 	list-style: none;
 }
@@ -52,7 +61,7 @@ ul {
 
 /* Шапка сайта */
 .header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
   
   padding-top: 24px;
   padding-bottom: 25px;
@@ -148,6 +157,8 @@ ul {
 
 .hero-section-button {
   padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
   
   color: #ffffff;
   background-color: var(--selection-color);
@@ -158,14 +169,20 @@ ul {
   line-height: 1.9;
   letter-spacing: 0.06em;
 }
-
+/*
+.hero-section-button:hover,
+.hero-section-button:focus {
+  background-color: var(--background-color);
+  color: var(--selection-color);
+}
+*/
 /* Преимущества */
 .advantage-list {
   display: flex;
   justify-content: space-between;
   
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.7;
 }
 
 .advantage-list-item {
@@ -176,7 +193,7 @@ ul {
   margin-bottom: 10px;
   
   color: var(--text-secondary-color);
-  
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: 0.03em;
@@ -278,7 +295,8 @@ ul {
 }
 
 .footer-link {
-  color: var(--text-color);
+  color: #ffffff;
+  opacity: 60%;
   
   font-style: normal;
 }
@@ -289,6 +307,9 @@ ul {
 }
 
 .btn {
+  border: none;
+  border-radius: 4px;
+  
   background-color: #f5f4fa;
   
   font-family: Roboto;
@@ -335,15 +356,20 @@ ul {
 .project-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .project-card {
-  border-bottom: 1px solid #eeeeee;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 90px) / 3);
 }
 
-.project-card:not(:nth-child(n + 7)) {
-  margin-bottom: 30px;
+.card-description {
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 
 .card-description {
